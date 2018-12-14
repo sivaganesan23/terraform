@@ -6,10 +6,10 @@ module "network" {
 
 module "infra" {
     source          = "./Modules/infra"
-    proj            = "${var.proj}"
-    application     = "${var.application}"
 }
 
 module "database" {
     source = "./Modules/database"
+    proj            = "${var.proj}"
+    application     = "${var.application}"
 }
