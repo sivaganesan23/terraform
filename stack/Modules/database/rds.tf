@@ -12,7 +12,7 @@ resource "aws_db_instance" "student-rds" {
   password              = "${var.dbpass}"
   parameter_group_name  = "${aws_db_parameter_group.default.id}"
   skip_final_snapshot   = true
-  identifier            = "rds-${var.proj}"
+  identifier            = "rds${var.proj}"
   tags = {
     Name        = "${var.proj}-rds"
     Application = "${var.application}"
