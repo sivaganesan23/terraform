@@ -1,6 +1,7 @@
 module "network" {
-    source = "./Modules/network"
-    proj  = "${var.proj}"
+    source          = "./Modules/network"
+    proj            = "${var.proj}"
+    application     = "${var.application}"
 }
 
 module "infra" {

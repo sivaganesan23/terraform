@@ -1,3 +1,7 @@
 variable "proj" {
-  default = "SAMPLE"
+  default = "Student"
+}
+
+variable "application" {
+  default = "WEB"
 }
