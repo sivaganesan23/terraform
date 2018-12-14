@@ -2,6 +2,16 @@ resource "aws_db_parameter_group" "default" {
   name   = "mariadb-student-pg"
   family = "mariadb10.3"
 }
+
+resource "aws_db_subnet_group" "default" {
+  name       = "main"
+  subnet_ids = ["${aws_subnet.frontend.id}", "${aws_subnet.backend.id}"]
+
+  tags = {
+    Name = "My DB subnet group"
+  }
+}
+
 resource "aws_db_instance" "student-rds" {
   allocated_storage     = 10
   storage_type          = "gp2"
