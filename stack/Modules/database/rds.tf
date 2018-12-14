@@ -1,5 +1,5 @@
 resource "aws_db_parameter_group" "default" {
-  name   = "mariadb-studentapp-pg"
+  name   = "mariadb-student-pg"
   family = "mariadb10.3"
 }
 resource "aws_db_instance" "student-rds" {
