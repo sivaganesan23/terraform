@@ -46,7 +46,7 @@ resource "aws_subnet" "public" {
     cidr_block  = "${element(var.pub-subnets, count.index)}"
 
   tags = {
-    Name        = "Subnet-Public-${var.proj}-${var.az-single-char}"
+    #Name        = "Subnet-Public-${var.proj}-${var.az-single-char}"
     Application = "${var.application}"
   }
 }
@@ -57,7 +57,7 @@ resource "aws_subnet" "private" {
     cidr_block  = "${element(var.priv-subnets, count.index)}"
 
   tags = {
-    Name        = "Subnet-Private-${var.proj}-${var.az-single-char}"
+    #Name        = "Subnet-Private-${var.proj}-${var.az-single-char}"
     Application = "${var.application}"
   }
 }
