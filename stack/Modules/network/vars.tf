@@ -15,7 +15,7 @@ variable "az-single-char" {
     default = ["A","B","C","D","E","F"]
 }
 
-data "aws_availability_zones" "available" {}
+data "aws_availability_zones" "az" {}
 
 
 
