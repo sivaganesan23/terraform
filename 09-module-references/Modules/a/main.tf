@@ -3,5 +3,5 @@ variable "aws_vpc" {
 }
 
 resource "aws_vpc" "main" {
-  cidr_block       = "${var.aws}"
+  cidr_block       = "${var.aws_vpc}"
 }
