@@ -8,5 +8,3 @@ module "b" {
     source = "./Modules/b" 
     vpc_id = "${module.a.vpc_id}"
 }
-
-variable "vpc_id" {}
