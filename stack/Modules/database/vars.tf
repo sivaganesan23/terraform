@@ -14,3 +14,6 @@ variable "dbpass" {
 ### Variables inherited from MAIN
 variable "proj" {}
 variable "application" {}
+variable "private_subnets" {
+    type = "list"
+}
