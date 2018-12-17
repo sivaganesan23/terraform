@@ -1,4 +1,6 @@
-variable "vpc_id" {}
+variable "vpc_id" {
+    type = "string"
+}
 
 resource "aws_subnet" {
     vpc_id     = "${var.vpc_id}"
