@@ -5,5 +5,5 @@ module "a" {
 }
 
 module "b" {
-    source = "./Modules/a"
+    source = "./Modules/b"
 }
