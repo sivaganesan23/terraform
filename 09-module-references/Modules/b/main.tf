@@ -1,1 +1,1 @@
-resource aws_subnet 
+resource "aws_subnet" {} 
