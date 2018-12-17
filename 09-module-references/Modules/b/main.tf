@@ -1,4 +1,4 @@
-variable "vpc_id" {
+variable "vpcid" {
     type = "string"
 }
 
