@@ -8,7 +8,7 @@ resource "aws_db_subnet_group" "default" {
   subnet_ids = ["${aws_subnet.frontend.id}", "${aws_subnet.backend.id}"]
 
   tags = {
-    Name = "My DB subnet group"
+    Name = "MariaDB-SubnetGroup"
   }
 }
 
