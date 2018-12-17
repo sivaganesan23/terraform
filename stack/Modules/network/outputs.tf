@@ -1,3 +1,3 @@
 output "private_subnets" {
-    value = "${}"
+    value = "${aws_subnet.private}"
 }
