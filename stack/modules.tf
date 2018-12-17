@@ -12,5 +12,5 @@ module "database" {
     source = "./Modules/database"
     proj            = "${var.proj}"
     application     = "${var.application}"
-    private_subnets = "${module.infra.private_subnets}"
+    private_subnets = "${module.network.private_subnets}"
 }
