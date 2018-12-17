@@ -1,1 +1,1 @@
-output "aw"
+output "pri"
