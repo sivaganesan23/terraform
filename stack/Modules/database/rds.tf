@@ -4,7 +4,7 @@ resource "aws_db_parameter_group" "default" {
 }
 
 resource "aws_db_subnet_group" "default" {
-  name       = "${var.proj}-subnet-group"
+  name       = "studentapp-subnet-group"
   subnet_ids = ["${var.private_subnets}"]
 
   tags = {
