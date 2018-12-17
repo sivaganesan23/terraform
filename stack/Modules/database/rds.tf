@@ -21,7 +21,7 @@ resource "aws_db_instance" "student-rds" {
   username              = "${var.dbname}"
   password              = "${var.dbpass}"
   parameter_group_name  = "${aws_db_parameter_group.default.id}"
-  db_subnet_group_name  = "${aws_db_subnet_group.default}"
+  db_subnet_group_name  = "${aws_db_subnet_group.default.}"
   skip_final_snapshot   = true
   identifier            = "rds-studentapp"
   tags = {
