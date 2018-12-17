@@ -6,5 +6,5 @@ module "a" {
 
 module "b" {
     source = "./Modules/b"
-    vpc_id =${module}
+    vpc_id =${module.}
 }
