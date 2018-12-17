@@ -1,1 +1,3 @@
-output "private_subnets" 
+output "private_subnets" {
+    value = "${}"
+}
