@@ -55,7 +55,7 @@ resource "aws_subnet" "private" {
     count       = "${length(var.priv-subnets)}"
     vpc_id      = "${aws_vpc.main.id}"
     cidr_block  = "${element(var.priv-subnets, count.index)}"
-
+    availability_zone = "${data.aws_availability_zones.az.names[count.index]}"
   tags = {
     Name        = "Subnet-Private-${var.proj}-${element(var.az-single-char, count.index)}"
     Application = "${var.application}"
