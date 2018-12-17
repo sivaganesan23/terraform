@@ -1,3 +1,3 @@
 variable "aws_vpc" {
-    cidr_block
+    cidr_block = ""
 }
