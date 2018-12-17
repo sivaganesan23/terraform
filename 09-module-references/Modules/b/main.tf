@@ -1,6 +1,3 @@
-variable "vpc_id" {
-    type = "string"
-}
 
 resource "aws_subnet" {
     vpc_id     = "${module.a.vpc_id}"
