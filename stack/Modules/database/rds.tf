@@ -28,3 +28,4 @@ resource "aws_db_instance" "student-rds" {
     Application = "${var.application}"
   }
 }
+
