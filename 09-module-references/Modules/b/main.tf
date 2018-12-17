@@ -2,7 +2,7 @@ variable "vpc_id" {
     type = "string"
 }
 
-resource "aws_subnet" {
+resource "aws_subnet" "main" {
     vpc_id     = "${module.a.vpc_id}"
     cidr_block = "10.5.1.0/24"
 } 
