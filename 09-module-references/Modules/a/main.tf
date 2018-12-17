@@ -1,1 +1,1 @@
-variable ""
+variable "aws_vpc" {}
