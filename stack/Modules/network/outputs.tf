@@ -1,1 +1,1 @@
-output "pri"
+output "private_subnets" 
