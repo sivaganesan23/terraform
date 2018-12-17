@@ -1,5 +1,5 @@
 provider "aws" {}
 
 module "a" {
-    source ""
+    source = ""
 }
