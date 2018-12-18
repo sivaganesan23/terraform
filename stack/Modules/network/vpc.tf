@@ -20,7 +20,7 @@ resource "aws_internet_gateway" "gw" {
 ### Peering connection
 resource "aws_vpc_peering_connection" "peer" {
   vpc_id        = "${aws_vpc.main.id}"
-  peer_vpc_id   = ""
+  peer_vpc_id   = "vpc-4271752b"
   peer_owner_id = "${data.aws_caller_identity.peer.account_id}"
   peer_region   = "us-west-2"
   auto_accept   = false
