@@ -23,7 +23,7 @@ resource "aws_vpc_peering_connection" "peer" {
   peer_vpc_id   = "vpc-4271752b"
   peer_owner_id = "${data.aws_caller_identity.peer.account_id}"
   peer_region   = "us-east-2"
-  auto_accept   = true
+  auto_accept   = false
 
   tags = {
     Name = "Default-to-Student-VPC-Peer"
