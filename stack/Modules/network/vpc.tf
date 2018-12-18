@@ -61,6 +61,11 @@ resource "aws_route_table" "pub-rt" {
 resource "aws_route_table" "priv-rt" {
   vpc_id    = "${aws_vpc.main.id}"
 
+  route {
+    cidr_block = "0.0.0.0/0"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.peer.id}"
+  }
+  
   tags = {
     Name        = "${var.proj}-Private-RT"
     Application = "${var.application}"
