@@ -48,7 +48,7 @@ resource "aws_route_table" "pub-rt" {
   }
 
   route {
-    
+    cidr_block = "0.0.0.0/0"
   }
 
   tags = {
