@@ -111,6 +111,6 @@ resource "aws_route_table_association" "priv-rta" {
 resource "aws_route" "r1" {
   route_table_id            = "rtb-92ee0bfa"
   destination_cidr_block    = "10.0.0.0/22"
-  vpc_peering_connection_id = "pcx-45ff3dc1"
+  vpc_peering_connection_id = "${aws_pee}"
   depends_on                = ["aws_route_table.testing"]
 }
