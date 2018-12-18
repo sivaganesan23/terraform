@@ -47,6 +47,10 @@ resource "aws_route_table" "pub-rt" {
     gateway_id = "${aws_internet_gateway.gw.id}"
   }
 
+  route {
+    
+  }
+
   tags = {
     Name        = "${var.proj}-Public-RT"
     Application = "${var.application}"
