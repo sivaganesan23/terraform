@@ -26,7 +26,7 @@ resource "aws_vpc_peering_connection" "peer" {
   auto_accept   = true
 
   tags = {
-    Name = "Default-to-Student-"
+    Name = "Default-to-Student-VPC-Peer"
   }
 }
 
