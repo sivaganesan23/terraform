@@ -32,7 +32,7 @@ resource "aws_db_instance" "student-rds" {
 
 resource "null_resource" "schema" {
     provisioner "local-exec" {
-        command = [
+        command = <<EOF
             "wget -O /tmp/schema.sql https://raw.githubusercontent.com/citb33/project-documentation/master/student-application.sql",
             "mysql -h ${aws_db_instance.student-rds.address} -u ${var.dbuser} -p${var.dbpass} </tmp/schema.sql"
         ]
