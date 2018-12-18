@@ -108,7 +108,7 @@ resource "aws_route_table_association" "priv-rta" {
 
 
 ### Add route entry to existing VPC with peering connection
-resource "aws_route" "r" {
+resource "aws_route" "r1" {
   route_table_id            = "rtb-4fbb3ac4"
   destination_cidr_block    = "10.0.1.0/22"
   vpc_peering_connection_id = "pcx-45ff3dc1"
