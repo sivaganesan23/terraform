@@ -105,3 +105,6 @@ resource "aws_route_table_association" "priv-rta" {
     subnet_id       = "${element(aws_subnet.private.*.id, count.index)}"
     route_table_id  = "${aws_route_table.priv-rt.id}"
 }
+
+
+### Add route entry to existing VPC with peering connection
