@@ -30,6 +30,8 @@ resource "aws_vpc_peering_connection" "peer" {
   }
 }
 
+
+
 resource "aws_route_table" "pub-rt" {
   vpc_id    = "${aws_vpc.main.id}"
 
