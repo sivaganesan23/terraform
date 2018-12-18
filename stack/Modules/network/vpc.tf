@@ -49,7 +49,7 @@ resource "aws_route_table" "pub-rt" {
 
   route {
     cidr_block = "0.0.0.0/0"
-    vpc_peering_connection_id = "${aws_vpc}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.peer.id}"
   }
 
   tags = {
