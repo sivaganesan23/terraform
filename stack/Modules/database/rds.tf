@@ -18,7 +18,7 @@ resource "aws_db_instance" "student-rds" {
   engine                = "mariadb"
   engine_version        = "10.3"
   instance_class        = "db.t2.micro"
-  username              = "${var.dbname}"
+  username              = "${var.dbuser}"
   password              = "${var.dbpass}"
   parameter_group_name  = "${aws_db_parameter_group.default.id}"
   db_subnet_group_name  = "${aws_db_subnet_group.default.name}"
