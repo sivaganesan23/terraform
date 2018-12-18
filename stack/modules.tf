@@ -6,6 +6,10 @@ module "network" {
 
 module "infra" {
     source          = "./Modules/infra"
+    dbuser          = "${module.database.dbuser}" 
+    dbname          = "${module.database.dbname}" 
+    dbpass          = "${module.database.dbpass}" 
+    dbip            = "${module.database.dbip}" 
 }
 
 module "database" {
