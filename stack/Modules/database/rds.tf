@@ -20,7 +20,7 @@ resource "aws_db_instance" "student-rds" {
   instance_class        = "db.t2.micro"
   username              = "${var.dbname}"
   password              = "${var.dbpass}"
-  name                  = ""
+  name                  = "${var.dbname}"
   parameter_group_name  = "${aws_db_parameter_group.default.id}"
   db_subnet_group_name  = "${aws_db_subnet_group.default.name}"
   skip_final_snapshot   = true
