@@ -16,6 +16,9 @@ variable "az-single-char" {
 }
 
 data "aws_availability_zones" "az" {}
+data "aws_caller_identity" "peer" {
+  provider = "aws.peer"
+}
 
 
 
