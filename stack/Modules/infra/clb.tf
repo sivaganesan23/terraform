@@ -25,6 +25,6 @@ resource "aws_elb" "app-elb" {
   connection_draining_timeout = 400
 
   tags = {
-    Name = "${var.pro}-app-clb"
+    Name = "${var.proj}-app-clb"
   }
 }
