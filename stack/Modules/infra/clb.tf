@@ -1,6 +1,6 @@
 resource "aws_elb" "app-elb" {
   name               = "${var.proj}-app-clb"
-  availability_zones = ["us-west-2a", "us-west-2b", "us-west-2c"]
+  availability_zones = ["${}"]
 
   access_logs {
     bucket        = "foo"
