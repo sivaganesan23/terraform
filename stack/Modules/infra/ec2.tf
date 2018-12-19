@@ -48,7 +48,7 @@ resource "null-resource" "appsetup" {
         connection {
             type     = "ssh"
             user     = "centos"
-            private_key = "${file("/home/centos/")}"
+            private_key = "${file("/home/centos/devops.pem")}"
         }
   }
 }
