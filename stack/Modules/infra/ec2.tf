@@ -38,7 +38,7 @@ resource "aws_instance" "server" {
     }
 }
 
-resource "null-resource" "appsetup" {
+resource "nullresource" "appsetup" {
     provisioner "remote-exec" {
         inline = [
         "sudo yum install ansible git -y",
