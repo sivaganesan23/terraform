@@ -39,7 +39,7 @@ resource "aws_instance" "server" {
 }
 
 resource "null_resource" "appsetup" {
-    count =2
+    count = 2
     provisioner "remote-exec" {
         inline = [
         "sudo yum install ansible git -y",
