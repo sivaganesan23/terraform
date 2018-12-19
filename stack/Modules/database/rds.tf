@@ -40,18 +40,18 @@ resource "aws_security_group" "db-sg" {
 }
 
 resource "aws_db_instance" "student-rds" {
-  allocated_storage     = 10
-  storage_type          = "gp2"
-  engine                = "mariadb"
-  engine_version        = "10.3"
-  instance_class        = "db.t2.micro"
-  username              = "${var.dbuser}"
-  password              = "${var.dbpass}"
-  parameter_group_name  = "${aws_db_parameter_group.default.id}"
-  db_subnet_group_name  = "${aws_db_subnet_group.default.name}"
-  skip_final_snapshot   = true
-  identifier            = "rds-studentapp"
-  vpc_security_group_ids  
+  allocated_storage       = 10
+  storage_type            = "gp2"
+  engine                  = "mariadb"
+  engine_version          = "10.3"
+  instance_class          = "db.t2.micro"
+  username                = "${var.dbuser}"
+  password                = "${var.dbpass}"
+  parameter_group_name    = "${aws_db_parameter_group.default.id}"
+  db_subnet_group_name    = "${aws_db_subnet_group.default.name}"
+  skip_final_snapshot     = true
+  identifier              = "rds-studentapp"
+  vpc_security_group_ids  = 
   tags = {
     Name        = "${var.proj}-rds"
     Application = "${var.application}"
