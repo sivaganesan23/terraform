@@ -25,6 +25,6 @@ resource "aws_elb" "app-elb" {
   connection_draining_timeout = 400
 
   tags = {
-    Name = "foobar-terraform-elb"
+    Name = "${}"
   }
 }
