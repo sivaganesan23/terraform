@@ -1,6 +1,6 @@
 resource "aws_elb" "app-elb" {
   name               = "${var.proj}-app-clb"
-  availability_zones = ["${data.aws_availability_zones.az.names}"]
+  availability_zones = ["us"]
 
 
   listener {
