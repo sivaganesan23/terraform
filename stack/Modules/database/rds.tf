@@ -13,8 +13,8 @@ resource "aws_db_subnet_group" "default" {
 }
 
 resource "aws_security_group" "db-sg" {
-  name        = "Student-Proj-BD-SG"
-  description = "Student-Proj-Instance-SG"
+  name        = "Student-Proj-DB-SG"
+  description = "Student-Proj-DB-SG"
   vpc_id      = "${var.vpcid}"
 
   ingress {
