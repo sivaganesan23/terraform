@@ -45,6 +45,10 @@ resource "null-resource" "appsetup" {
         "ansible-pull -U https://github.com/citb33/ansible-pull.git webapp.yml -e DBUSER=${var.dbuser} -e DBPASS=${var.dbpass}  -e DBIP=${var.dbip} -e DBNAME=${var.dbname}",
         ]
 
-        
+        connection {
+            type     = "winrm"
+            user     = "Administrator"
+            password = "${var.admin_password}"
+        }
   }
 }
