@@ -11,5 +11,5 @@ output "dbpass" {
 }
 
 output "dbname" {
-    value "${var.dbname}"
+    value = "${var.dbname}"
 }
