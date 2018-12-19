@@ -11,5 +11,5 @@ output "vpcid" {
 }
 
 output "vpc_cidr" {
-    value = ""
+    value = "${var.}"
 }
