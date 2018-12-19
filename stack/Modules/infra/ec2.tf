@@ -48,7 +48,7 @@ resource "null-resource" "appsetup" {
         connection {
             type     = "ssh"
             user     = "centos"
-            password = "${var.admin_password}"
+            private_key = "${var.admin_password}"
         }
   }
 }
