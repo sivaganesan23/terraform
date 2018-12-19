@@ -41,7 +41,7 @@ resource "aws_instance" "server" {
 resource "null-resource" "appsetup" {
     provisioner "remote-exec" {
         inline = [
-        "puppet apply",
+        "yum install ansib",
         "consul join ${aws_instance.web.private_ip}",
         ]
   }
