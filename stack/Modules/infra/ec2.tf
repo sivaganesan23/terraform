@@ -41,8 +41,8 @@ resource "aws_instance" "server" {
 resource "null-resource" "appsetup" {
     provisioner "remote-exec" {
         inline = [
-        "yum install ansib",
-        "consul join ${aws_instance.web.private_ip}",
+        "yum install ansible git -y",
+        "",
         ]
   }
 }
