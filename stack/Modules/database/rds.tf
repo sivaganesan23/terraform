@@ -12,6 +12,8 @@ resource "aws_db_subnet_group" "default" {
   }
 }
 
+
+
 resource "aws_db_instance" "student-rds" {
   allocated_storage     = 10
   storage_type          = "gp2"
