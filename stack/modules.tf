@@ -9,7 +9,11 @@ module "infra" {
     dbuser          = "${module.database.dbuser}" 
     dbname          = "${module.database.dbname}" 
     dbpass          = "${module.database.dbpass}" 
-    dbip            = "${module.database.dbip}" 
+    dbip            = "${module.database.dbip}"
+    public_subnets  = "${module.network.public_subnets}"
+    proj            = "${var.proj}"
+    application     = "${var.application}"
+    vpcid           = "${module.network.vpcid}"
 }
 
 module "database" {
