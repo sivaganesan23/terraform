@@ -38,4 +38,6 @@ resource "aws_instance" "server" {
     }
 }
 
-resource "null-resource" ""
+resource "null-resource" "appsetup" {
+    
+}
