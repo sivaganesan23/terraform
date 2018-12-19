@@ -9,3 +9,5 @@ output "public_subnets" {
 output "vpcid" {
     value = "${aws_vpc.main.id}"
 }
+
+output "vpc"
