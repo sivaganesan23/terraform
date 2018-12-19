@@ -17,3 +17,5 @@ variable "application" {}
 variable "private_subnets" {
     type = "list"
 }
+
+variable 
