@@ -12,7 +12,32 @@ resource "aws_db_subnet_group" "default" {
   }
 }
 
+resource "aws_security_group" "instance-sg" {
+  name        = "Student-Proj-Instance-SG"
+  description = "Student-Proj-Instance-SG"
+  vpc_id      = "${var.vpcid}"
 
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "TCP"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "TCP"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port       = 0
+    to_port         = 0
+    protocol        = "-1"
+    cidr_blocks     = ["0.0.0.0/0"]
+  }
+}
 
 resource "aws_db_instance" "student-rds" {
   allocated_storage     = 10
