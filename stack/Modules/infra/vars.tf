@@ -17,3 +17,5 @@ variable "public_subnets" {
 
 variable "proj" {}
 variable "application" {}
+
+variable "dbpass" {}
