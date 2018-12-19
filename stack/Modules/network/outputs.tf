@@ -10,4 +10,6 @@ output "vpcid" {
     value = "${aws_vpc.main.id}"
 }
 
-output "vpc"
+output "vpc_cidr" {
+    value = ""
+}
