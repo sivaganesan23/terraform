@@ -1,6 +1,6 @@
 resource "aws_elb" "app-elb" {
   name               = "${var.proj}-app-clb"
-  security_groups       = "${aws}"
+  security_groups       = "${aws_security_group.instance-sg}"
 
 
   listener {
