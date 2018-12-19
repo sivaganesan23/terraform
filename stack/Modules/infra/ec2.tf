@@ -37,3 +37,5 @@ resource "aws_instance" "server" {
         Application = "${var.application}"
     }
 }
+
+resource ""
