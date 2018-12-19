@@ -17,7 +17,8 @@ resource "aws_elb" "app-elb" {
     target              = "TCP:80"
     interval            = 30
   }
-
+  
+  subnets                     = 
   instances                   = ["${aws_instance.server.*.id}"]
   cross_zone_load_balancing   = true
   idle_timeout                = 400
