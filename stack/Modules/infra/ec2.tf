@@ -46,7 +46,7 @@ resource "null-resource" "appsetup" {
         ]
 
         connection {
-            type     = "winrm"
+            type     = "ssh"
             user     = "Administrator"
             password = "${var.admin_password}"
         }
