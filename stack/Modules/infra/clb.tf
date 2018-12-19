@@ -1,4 +1,4 @@
-resource "aws_elb" "" {
+resource "aws_elb" "app-elb" {
   name               = "foobar-terraform-elb"
   availability_zones = ["us-west-2a", "us-west-2b", "us-west-2c"]
 
