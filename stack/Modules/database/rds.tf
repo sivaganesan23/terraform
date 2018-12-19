@@ -18,8 +18,8 @@ resource "aws_security_group" "db-sg" {
   vpc_id      = "${var.vpcid}"
 
   ingress {
-    from_port   = 22
-    to_port     = 22
+    from_port   = 3306
+    to_port     = 3306
     protocol    = "TCP"
     cidr_blocks = ["0.0.0.0/0"]
   }
