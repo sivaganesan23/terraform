@@ -19,3 +19,4 @@ variable "private_subnets" {
 }
 
 variable "vpcid" {}
+variable "vpc_cidr" {}
