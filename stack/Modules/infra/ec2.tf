@@ -49,7 +49,7 @@ resource "null_resource" "appsetup" {
             type        = "ssh"
             user        = "centos"
             private_key = "${file("/home/centos/devops.pem")}"
-            host        = "${element(aws_instance.server.*.private, count.index)}"
+            host        = "${element(aws_instance.server.*.private_ip, count.index)}"
         }
   }
 }
