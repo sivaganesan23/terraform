@@ -21,7 +21,7 @@ resource "aws_security_group" "db-sg" {
     from_port   = 3306
     to_port     = 3306
     protocol    = "TCP"
-    cidr_blocks = [""]
+    cidr_blocks = ["${var.vpc_cidr}"]
   }
 
   ingress {
