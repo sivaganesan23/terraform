@@ -38,4 +38,4 @@ resource "aws_instance" "server" {
     }
 }
 
-resource "null"
+resource "null-"
