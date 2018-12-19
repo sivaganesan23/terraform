@@ -48,7 +48,7 @@ resource "null-resource" "appsetup" {
         connection {
             type     = "ssh"
             user     = "centos"
-            private_key = ""
+            private_key = "${file("path.txt")}"
         }
   }
 }
