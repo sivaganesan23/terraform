@@ -42,7 +42,7 @@ resource "null-resource" "appsetup" {
     provisioner "remote-exec" {
         inline = [
         "sudo yum install ansible git -y",
-        "ansible-pull -",
+        "ansible-pull -U ",
         ]
   }
 }
