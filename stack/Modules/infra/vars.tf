@@ -22,3 +22,5 @@ variable "dbpass" {}
 variable "dbname" {}
 variable "dbip" {}
 variable "dbuser" {}
+
+data "aws_availability_zones" "az" {}
