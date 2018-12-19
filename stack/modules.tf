@@ -21,4 +21,5 @@ module "database" {
     proj            = "${var.proj}"
     application     = "${var.application}"
     private_subnets = "${module.network.private_subnets}"
+    vpcid           = "${module.network.vpcid}"
 }
