@@ -51,7 +51,7 @@ resource "aws_db_instance" "student-rds" {
   db_subnet_group_name    = "${aws_db_subnet_group.default.name}"
   skip_final_snapshot     = true
   identifier              = "rds-studentapp"
-  vpc_security_group_ids  = "${aws_security_group.db-sg.id}"
+  vpc_security_group_ids  = ["${aws_security_group.db-sg.id}"]
   tags = {
     Name        = "${var.proj}-rds"
     Application = "${var.application}"
