@@ -19,5 +19,6 @@ variable "proj" {}
 variable "application" {}
 
 variable "dbpass" {}
-variable "dbname" {
-}
+variable "dbname" {}
+variable "dbname" {}
+variable "dbname" {}
