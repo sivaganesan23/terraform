@@ -20,5 +20,5 @@ variable "application" {}
 
 variable "dbpass" {}
 variable "dbname" {}
-variable "dbname" {}
-variable "dbname" {}
+variable "dbip" {}
+variable "dbuser" {}
