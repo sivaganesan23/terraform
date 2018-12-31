@@ -59,3 +59,8 @@ resource "local_file" "ipaddress_of_ec2" {
     content     = "${element(aws_instance.server.*.private_ip, 0)}"
     filename = "/tmp/hosts"
 }
+
+resource "local_file" "public_address_of_ec2" {
+    content     = "${element(aws_instance.server.*.public_ip, 0)}"
+    filename = "/tmp/pubip"
+}
