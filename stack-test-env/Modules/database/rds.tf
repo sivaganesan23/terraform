@@ -1,6 +1,10 @@
 resource "aws_db_parameter_group" "default" {
   name   = "mariadb-student-pg"
   family = "mariadb10.3"
+  parameter {
+    name  = "lower_case_table_names"
+    value = "1"
+  }
 }
 
 resource "aws_db_subnet_group" "default" {
