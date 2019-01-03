@@ -4,6 +4,7 @@ resource "aws_db_parameter_group" "default" {
   parameter {
     name  = "lower_case_table_names"
     value = "1"
+    apply_method = "pending-reboot"
   }
 }
 
